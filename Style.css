@@ -1,0 +1,523 @@
+h1{
+    
+    color: black;
+    text-decoration: wavy;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+}
+h1 span {
+    color: red;
+}
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+section:not(#all){
+    background-color: rgba(176, 177, 115, 0.366);
+    font-family: sans-serif;
+}
+hr {
+   
+    height: 10px;
+    background-color: #000;
+  }
+ 
+header{
+    z-index:1000;
+    background: rgb(123, 187, 113);
+    padding: 10px;
+    position: fixed;
+    justify-content: space-evenly;  
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    
+}
+.logo-container,
+.nav-links{
+    display: flex;
+    }
+
+.logo-container{
+    flex:1;
+}
+.logo{
+   
+    font-weight: 500;
+    font-size: 23px;
+    margin: 5px;
+}
+nav{
+    flex:2;
+}
+nav ul li{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 35px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0s;
+}
+nav ul li::after{
+    content: '';
+    background: rgba(0, 0, 0, 0.668);
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;
+    position: absolute;
+    top: 10%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.2s ease-in;
+    z-index: -1;
+    opacity: 0;
+  
+}
+
+nav ul li:hover{
+    color: #fff;
+}
+
+nav ul li:hover::after{
+    top:43%;
+    opacity:1;
+}
+  
+.nav-links{
+    justify-content: space-around;
+    list-style:none;
+}
+.nav-link{
+    text-decoration: dashed;
+    color: rgb(0, 0, 0);
+    font-size:30px;
+}
+
+.nav-link:hover{
+    color: rgb(255, 255, 255);
+}
+
+.nav-link:hover span{
+    color: #c1f147;
+}
+
+
+
+ #home {
+	background-image: url(https://media-cdn.tripadvisor.com/media/photo-m/1280/24/9b/05/4b/welcome-to-even-hotel.jpg);
+	text-align: left;
+    background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 12;
+}
+
+
+#home::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(37, 38, 27);
+	opacity: 0.3;
+	z-index: -1;
+}
+
+ #home h1 {
+    color: #e8eeef;
+    font-style: oblique;
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+    -webkit-text-stroke: #5fcf80;
+	position: relative;
+ } 
+
+
+ #home h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #d3d7d7;
+    -webkit-text-stroke: rgb(175, 34, 34);
+    border-right: 2px solid rgb(192, 194, 85);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+ }
+
+
+ #home h1 span{
+    color: rgb(244, 9, 9) ;
+    font-weight: 500;
+    font-style: unset;
+ }
+ 
+
+
+  
+.footer{
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: rgb(19, 19, 19);
+    color: bisque;
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing:1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: rgb(95, 163, 223);
+    margin-bottom: 10px;
+}
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: 2px;
+ 
+}
+form button{
+    background: transparent;
+    border: 2px solid rgb(215, 53, 53);
+    color: rgb(30, 29, 29);
+    border-radius:30px;
+    padding: 10px 30px;
+    font-size: 15px;
+}
+.card{
+    box-shadow: 0px 0px 8px 5px rgba(90, 143, 70, 0.4);
+}
+.card img{
+    transition: all 0.5s ease-out;
+}
+.card:hover .card-img-top{
+    transition: all 0.5s ease;
+    transform: scale(1.2);
+}
+.icons{
+    margin-top: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+.icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor:pointer;
+}
+.services{
+    background-color: #555;
+}
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 15px;
+    
+  }
+
+.row{
+    padding-left: 60px;
+    max-height: min-content;
+}
+  
+ 
+  .about-section {
+    text-decoration: double;
+    padding: 10%;
+    font-size: 18px;
+    text-align:justify;
+    background-image: url(https://gdcindia.co.in/wp-content/uploads/2019/03/contact-us-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .services{
+    padding-left: 10%;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: blanchedalmond;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+
+ 
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+}
+ 
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+ 
+h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+ 
+}
+ 
+h1:last-of-type {
+    color: var(--varyDarkBlue);
+}
+ 
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+ 
+.header {
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+ 
+.header p {
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 20px;
+    color: var(--grayishBlue);
+}
+ 
+.box p {
+    color: black
+}
+ 
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--varyDarkBlue);
+    padding: 30px;
+    margin: 20px;  
+}
+ 
+#body_header
+{
+ 
+    width:auto;
+    margin:0px auto;
+    text-align:center;
+    font-size:25px;
+}
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+ 
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+ 
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="search"],
+input[type="radio"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  background: rgba(118, 109, 109, 0.701);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: auto;
+  outline: 0;
+  padding: 8px;
+  width: 100%;
+  background-color: #c4c59f4a;
+  color: black;
+  box-shadow: 0 2px 0px rgba(0,0,0,0.03) inset;
+  margin-bottom: 25px;
+}
+input[type="checkbox"]
+
+{
+  margin: 0 4px 8px 0;
+}
+ 
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+button {
+    padding: 19px 39px 18px 39px;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+  }
+ 
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+ 
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+ 
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+ 
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+ 
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+
+
+form {
+    max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
+}
+
+
+
+ 
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+ 
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }
+    .header p {
+        width: 30%;
+    }
+    
+}
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+ 
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+@keyframes animate
+{
+   0%,10%,100%
+   {
+       width: 0;
+   }
+   70%,90%
+   {
+       width: 100%;
+   }
+}
+
